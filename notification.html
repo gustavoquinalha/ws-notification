@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>WebSpace</title>
+  </head>
+  <body>
+    
+    <a href="javascript:notify()">Clique aqui para a notificação</a>
+
+    <script type="text/javascript">
+
+
+
+    function notify() {
+      Notification.requestPermission(function() {
+          var notification = new Notification("WebSpace", {
+              icon: 'https://99prod.s3.amazonaws.com/uploads/image/file/324355/regular_ws-simbolo.jpg',
+              body: "Texto da notificação"
+          });
+          notification.onclick = function() {
+              window.open("http://webspacemarketing.com.br");
+          }
+      });
+    }
+
+    </script>
+  </body>
+</html>
